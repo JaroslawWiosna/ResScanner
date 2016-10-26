@@ -1,3 +1,4 @@
+import sys
 import numpy as np
 import cv2
 from matplotlib import pyplot as plt
@@ -30,7 +31,8 @@ mask = cv2.inRange(rez, lower, upper)
 cnts, hierarchy = cv2.findContours(mask.copy(), \
                                    cv2.RETR_TREE, \
                                    cv2.CHAIN_APPROX_SIMPLE)
-
+if not cnts:
+    sys.exit()
 c = max(cnts, key=cv2.contourArea)
 peri = cv2.arcLength(c, True)
 approx = cv2.approxPolyDP(c, 0.05 * peri, True)
