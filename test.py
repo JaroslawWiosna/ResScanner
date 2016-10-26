@@ -8,20 +8,20 @@ def printIMG(image):
 
 rez = cv2.imread("img/rez.jpg")
 
-blue_lower = np.array([255, 65, 65])
-blue_upper = np.array([200, 0, 0])
+blue_upper = np.array([255, 65, 65])
+blue_lower = np.array([200, 0, 0])
 
-red_lower = np.array([65, 65, 255])
-red_upper = np.array([0, 0, 200])
+red_upper = np.array([65, 65, 255])
+red_lower = np.array([0, 0, 200])
 
-green_lower = np.array([65, 255, 65])
-green_upper = np.array([0, 200, 0])
+green_upper = np.array([65, 255, 65])
+green_lower = np.array([0, 200, 0])
 
-white_lower = np.array([255, 255, 255])
-white_upper = np.array([200, 200, 200])
+white_upper = np.array([255, 255, 255])
+white_lower = np.array([200, 200, 200])
 
-black_lower = np.array([65, 65, 65])
-black_upper = np.array([0, 0, 0])
+black_upper = np.array([65, 65, 65])
+black_lower = np.array([0, 0, 0])
 
 upper = red_upper
 lower = red_lower
