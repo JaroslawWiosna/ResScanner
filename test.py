@@ -7,8 +7,25 @@ def printIMG(image):
     cv2.waitKey()
 
 rez = cv2.imread("img/rez.jpg")
-upper = np.array([65, 65, 255])
-lower = np.array([0, 0, 200])
+
+blue_lower = np.array([255, 65, 65])
+blue_upper = np.array([200, 0, 0])
+
+red_lower = np.array([65, 65, 255])
+red_upper = np.array([0, 0, 200])
+
+green_lower = np.array([65, 255, 65])
+green_upper = np.array([0, 200, 0])
+
+white_lower = np.array([255, 255, 255])
+white_upper = np.array([200, 200, 200])
+
+black_lower = np.array([65, 65, 65])
+black_upper = np.array([0, 0, 0])
+
+upper = red_upper
+lower = red_lower
+
 mask = cv2.inRange(rez, lower, upper)
 cnts, hierarchy = cv2.findContours(mask.copy(), \
                                    cv2.RETR_TREE, \
